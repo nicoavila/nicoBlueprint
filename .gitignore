@@ -1,0 +1,7 @@
+#Archivos
+.DS_Store
+
+#Carpetas
+assets/
+bower_components/
+node_modules/

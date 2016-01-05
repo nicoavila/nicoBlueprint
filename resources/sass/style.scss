@@ -1,0 +1,14 @@
+//Variables principales
+@import "_variables.scss";
+
+//Importa Bootstrap
+@import "_bootstrap.scss";
+
+//Importa Font-Awesome
+@import "font-awesome.scss";
+
+body {
+	background: $backgroundColor;
+}
+
+

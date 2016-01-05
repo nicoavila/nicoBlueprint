@@ -1,0 +1,25 @@
+{
+  "name": "nicoblueprint",
+  "description": "Blueprint personal para iniciar un proyecto en HTML",
+  "main": "index.js",
+  "authors": [
+    "Nicolas Avila"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "html",
+    "blueprint",
+    "start",
+    "project"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

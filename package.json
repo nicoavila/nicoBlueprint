@@ -1,0 +1,24 @@
+{
+  "name": "nicoblueprint",
+  "version": "1.0.0",
+  "description": "Blueprint personal para iniciar un proyecto en HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html",
+    "blueprint",
+    "start",
+    "project"
+  ],
+  "author": "Nicolas Avila",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^1.1.0"
+  }
+}
