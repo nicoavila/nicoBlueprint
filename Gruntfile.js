@@ -2,6 +2,23 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        //Configuración de deploy por FTP
+        'ftp-deploy': {
+            build: {
+                auth: {
+                    host: '[HOST]',
+                    port: 21,
+                    authKey: 'mainkey'
+                },
+                src: '[RUTA_ABSOLUTA]',
+                dest: '/public_html',
+                exclusions: [
+                    '/Users/nicoavila/Sites/nicoBlueprint/**/.DS_Store', 
+                    '/Users/nicoavila/Sites/nicoBlueprint/**/.test' 
+                ]
+            }
+        },
+
         //Copia los archivos
         copy: {
             main: {
@@ -57,7 +74,8 @@ module.exports = function (grunt) {
             sass: {
                 options: { livereload: true },
                 files: [
-                    'resources/sass/style.scss'
+                    'resources/sass/*'
+
                 ],
                 tasks: ['sass']
             }
@@ -68,8 +86,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-ftp-deploy');
 
     // Establece el nombre de las tareas
     grunt.registerTask('build', ['sass', 'copy']);
+    grunt.registerTask('deploy', ['ftp-deploy'])
     grunt.registerTask('default', ['build', 'watch']);
 }
